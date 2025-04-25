@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
   overflow-x: hidden;
-  padding-top: 70px; /* Prevent navbar overlap */
+  padding-top: 70px; 
 }
 
 .container {
