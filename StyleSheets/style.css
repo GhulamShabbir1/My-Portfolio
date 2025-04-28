@@ -9,7 +9,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
   overflow-x: hidden;
-  padding-top: 70px; 
+  padding-top: 70px;
 }
 
 .container {
@@ -62,15 +62,23 @@ section {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(45deg, #d32121,  rgb(2, 2, 65),rgb(179, 9, 179),rgb(11, 207, 11));
+  background: linear-gradient(45deg, #d32121, rgb(2, 2, 65), rgb(179, 9, 179), rgb(11, 207, 11));
   background-size: 300% 300%;
   animation: gradientAnimation 15s ease infinite;
 }
 
 @keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* ===== NAVBAR STYLES ===== */
@@ -130,9 +138,9 @@ section {
   font-size: 1rem;
   margin-right: 8px;
   transition: all 0.3s ease;
-  
-    color: red !important; /* Force visibility */
-    font-size: 20px !important;
+
+  color: red !important;
+  font-size: 20px !important;
 }
 
 /* Underline Animation */
@@ -222,7 +230,7 @@ section {
   font-size: 2.5rem;
   margin-bottom: 50px;
   text-align: center;
-  
+
 }
 
 /* About  */
@@ -248,7 +256,7 @@ section {
   object-fit: cover;
   border: 5px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 30px rgba(255, 200, 0, 0.3);
-  
+
 }
 
 /* Technical Skills */
@@ -309,10 +317,8 @@ section {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: conic-gradient(
-    #f9cb28 0% var(--percent), 
-    rgba(255, 255, 255, 0.1) var(--percent) 100%
-  );
+  background: conic-gradient(#f9cb28 0% var(--percent),
+      rgba(255, 255, 255, 0.1) var(--percent) 100%);
   z-index: 1;
 }
 
@@ -333,15 +339,17 @@ section {
   .about-content {
     flex-direction: column;
   }
-  
+
   .profile-img {
     width: 200px;
     height: 200px;
   }
 }
+
 .progress-bar {
   --width: 0;
 }
+
 .progress-bar::after {
   width: var(--width);
 }
@@ -512,7 +520,7 @@ section {
   stroke: #f9cb28;
   stroke-width: 2;
   stroke-linecap: round;
-    stroke-dasharray: 0, 100;
+  stroke-dasharray: 0, 100;
 
   transition: stroke-dasharray 1.5s ease;
 }
@@ -546,7 +554,7 @@ section {
   .circular-skills {
     gap: 2rem;
   }
-  
+
   .skill-circle {
     width: 120px;
     height: 120px;
@@ -695,7 +703,7 @@ section {
   .projects-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
-  
+
   .project-img {
     height: 200px;
   }
@@ -833,12 +841,12 @@ section {
   .testimonial-content {
     padding: 30px;
   }
-  
+
   .testimonial-author {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .author-info {
     display: flex;
     flex-direction: column;
@@ -925,10 +933,10 @@ section {
   outline: none;
 }
 
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:valid + label,
-.form-group textarea:valid + label {
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:valid+label,
+.form-group textarea:valid+label {
   top: -10px;
   left: 10px;
   font-size: 0.8rem;
@@ -1038,7 +1046,7 @@ section {
   .contact-container {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-info {
     padding: 40px 0 0;
   }
@@ -1048,12 +1056,12 @@ section {
   .contact-form-container {
     padding: 30px 20px;
   }
-  
+
   .contact-item {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .contact-icon {
     margin-right: 0;
     margin-bottom: 15px;
@@ -1079,18 +1087,20 @@ section {
 }
 
 .social-icon i {
-  pointer-events: none; /* Ensure clicks pass to link */
+  pointer-events: none;
+  /* Ensure clicks pass to link */
 }
 
 /* Testimonials container fix */
 .testimonials-container {
-  overflow: visible; /* Temporary for debugging */
+  overflow: visible;
+  /* Temporary for debugging */
 }
 
 .skill-progress {
-   height: 100%; 
-  border-radius: 5px; 
-  background: linear-gradient(90deg, #ff4d4d, #f9cb28); 
+  height: 100%;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff4d4d, #f9cb28);
   width: 0;
 }
 
@@ -1168,7 +1178,8 @@ section {
   margin-bottom: 5px;
 }
 
-.institution, .company {
+.institution,
+.company {
   display: block;
   font-weight: 500;
   margin-bottom: 10px;
@@ -1191,11 +1202,11 @@ section {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .timeline {
     padding-left: 20px;
   }
-  
+
   .timeline-item::before {
     left: -26px;
   }
