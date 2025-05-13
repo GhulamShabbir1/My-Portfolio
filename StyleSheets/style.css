@@ -255,7 +255,7 @@ section {
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 30px rgba(255, 200, 0, 0.3);
+  box-shadow: 0 0 30px rgba(255, 200, 0, 0.3); 
 
 }
 
@@ -1209,5 +1209,275 @@ section {
 
   .timeline-item::before {
     left: -26px;
+  }
+}
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+@media (max-width: 992px) {
+  /* General adjustments */
+  body {
+    padding-top: 60px;
+  }
+  
+  .container {
+    width: 95%;
+    padding: 0 15px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 80%;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: rgba(10, 10, 10, 0.98);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    padding: 2rem 0;
+    transition: left 0.3s ease;
+    gap: 1.5rem;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .nav-links a {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+  
+  /* Hero section */
+  .hero {
+    height: auto;
+    min-height: calc(100vh - 60px);
+    padding: 60px 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  /* About section */
+  .about-content {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  /* Skills section */
+  .vertical-skills {
+    width: 100%;
+  }
+  
+  .circular-skills {
+    gap: 1.5rem;
+  }
+  
+  .skill-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  /* Projects section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-img {
+    height: 200px;
+  }
+  
+  .projects-filter {
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 6px 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* Testimonials */
+  .testimonial-content {
+    padding: 30px 20px;
+  }
+  
+  .testimonial-author {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .author-info {
+    text-align: left;
+  }
+  
+  /* Contact section */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .contact-form-container {
+    padding: 30px;
+  }
+  
+  .contact-info {
+    padding-top: 0;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  
+  /* Timeline */
+  .timeline {
+    padding-left: 20px;
+  }
+  
+  .timeline-item::before {
+    left: -26px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Extra small devices */
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .circular-skills {
+    gap: 1rem;
+  }
+  
+  .skill-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .percent-number {
+    font-size: 1.2rem;
+  }
+  
+  .skill-name {
+    font-size: 0.8rem;
+  }
+  
+  .contact-form-container {
+    padding: 25px 15px;
+  }
+  
+  .form-group input, 
+  .form-group textarea {
+    padding: 12px;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Landscape orientation fixes */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 40px 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-buttons {
+    margin-top: 1rem;
+  }
+  
+  .cta-button {
+    padding: 8px 20px;
+  }
+}
+
+/* Animation adjustments for mobile */
+@media (max-width: 768px) {
+  /* Reduce number of network nodes on mobile */
+  .network-node {
+    display: none;
+  }
+  
+  /* Show only every 3rd node to reduce load */
+  .network-node:nth-child(3n) {
+    display: block;
+  }
+  
+  /* Reduce animation intensity */
+  .network-node, .network-line {
+    animation-duration: 1.5s !important;
   }
 }
